@@ -27,7 +27,7 @@ def step2_product_introduction():
     col1, col2 = st.columns([1, 2])
     
     with col1:
-        st.image("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400", 
+        st.image("https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?w=400", 
                 caption="AIペンケース『インテリ・ペンシル』", 
                 width=300)
     
