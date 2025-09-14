@@ -7,7 +7,7 @@ st.set_page_config(
 )
 
 def step1_introduction():
-    st.title("産業財産権")
+    st.title("産業財産権（pp.209-210）")
     st.caption("Created by Dit-Lab.(Daiki ITO)")
     st.caption("Supported by Tomoaki ATSUMI")
     
