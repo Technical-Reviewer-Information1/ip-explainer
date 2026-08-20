@@ -3,7 +3,11 @@
  "title": "産業財産権",
  "pp": "pp.209",
  "lead": "4つの産業財産権を、実際の製品を分類しながら覚えます。保護期間の長さも図で比べられます。",
- "scripts": ["chart.js","terms.js","quiz.js","app.js"],
+ "scripts": [
+  "terms.js",
+  "quiz.js",
+  "app.js"
+ ],
  "use": {
   "class": [
    "STEP 2 で身のまわりの製品を持ち寄り、どの権利で守られるかを考えさせる。",
