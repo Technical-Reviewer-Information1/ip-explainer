@@ -49,10 +49,19 @@
     { nm: '商標権', y: 10, t: '登録から10年（更新可）', renew: true }
   ];
   function drawPeriod() {
-    $('periodBox').innerHTML = PERIOD.map(p =>
-      '<div class="periodbar' + (p.renew ? ' renew' : '') + '"><span class="nm">' + p.nm + '</span>' +
-      '<span class="tr"><i style="width:' + (p.renew ? 100 : p.y / 25 * 100) + '%"></i></span>' +
-      '<span class="yr">' + p.y + '年</span></div>').join('');
+    const pb = $('periodBox');
+    if (!pb.querySelector('.periodbar')) {
+      pb.innerHTML = PERIOD.map(p =>
+        '<div class="periodbar' + (p.renew ? ' renew' : '') + '"><span class="nm">' + p.nm + '</span>' +
+        '<span class="tr"><i style="width:0%"></i></span>' +
+        '<span class="yr">' + p.y + '年</span></div>').join('');
+      requestAnimationFrame(function () {
+        pb.querySelectorAll('.periodbar .tr i').forEach(function (i, k) {
+          const p = PERIOD[k];
+          i.style.width = (p.renew ? 100 : p.y / 25 * 100) + '%';
+        });
+      });
+    }
     $('ipTable').innerHTML = '<thead><tr><th>権利</th><th>守るもの</th><th>保護期間</th></tr></thead><tbody>' +
       '<tr><td><strong>特許権</strong></td><td>高度な技術的アイデア・発明</td><td>出願から20年</td></tr>' +
       '<tr><td><strong>実用新案権</strong></td><td>物品の形状・構造などの考案</td><td>出願から10年</td></tr>' +

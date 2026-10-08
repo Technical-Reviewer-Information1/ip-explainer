@@ -28,7 +28,8 @@ table.tbl td .blankin{width:100%; max-width:none}
 .periodbar{display:flex;align-items:center;gap:10px;margin:7px 0}
 .periodbar .nm{min-width:6.5em;font-size:.9rem;font-weight:700}
 .periodbar .tr{flex:1;height:22px;background:#fff;border:1px solid var(--line);position:relative}
-.periodbar .tr i{display:block;height:100%;background:var(--accent);opacity:.7}
+.periodbar .tr i{display:block;height:100%;background:var(--accent);opacity:.7;
+  transition:width .9s cubic-bezier(.3,.9,.4,1)}
 .periodbar .yr{min-width:5.5em;text-align:right;font:700 .86rem/1 var(--mono)}
 .periodbar.renew .tr::after{content:'更新でずっと';position:absolute;right:4px;top:3px;font-size:.7rem;color:#fff;font-weight:700}
 .goods{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px}
